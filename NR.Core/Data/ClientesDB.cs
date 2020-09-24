@@ -539,7 +539,7 @@ namespace NR.Core.Data
             }
         }
 
-        public List<Clientes> Filtrar
+        public List<Clientes> Filter
         (
             string Identificacion,
             string Razon_Social,

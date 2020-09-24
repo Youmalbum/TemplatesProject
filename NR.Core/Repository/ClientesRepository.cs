@@ -53,6 +53,26 @@ namespace NR.Core.Repository
             return clientesDB.Delete(id);
         }
 
+        public List<Clientes> Filter
+        (
+            string Identificacion,
+            string Razon_Social,
+            DateTime datetime_createdBetweenFrom,
+            DateTime datetime_createdBetweenTo,
+            DateTime datetime_createdEqual,
+            DateTime datetime_createdMayor,
+            DateTime datetime_createdMenor,
+            string opeFecha
+        )
+        {
+           Data.ClientesDB clientesDB = new Data.ClientesDB();
+           var ListaClientes = clientesDB.Filter(Identificacion, Razon_Social,
+                datetime_createdBetweenFrom, datetime_createdBetweenTo, datetime_createdEqual,
+                datetime_createdMayor, datetime_createdMenor, opeFecha);
+
+            return ListaClientes;
+        }
+
         public IEnumerable<SelectListItem> ListaSelect()
         {
             NR.Core.Data.ClientesDB clientesDB = new Data.ClientesDB();

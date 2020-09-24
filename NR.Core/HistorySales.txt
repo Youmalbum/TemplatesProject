@@ -1,0 +1,57 @@
+﻿USE [royalty_invoice_ventas]
+GO
+/****** Object:  StoredProcedure [dbo].[HistorySales]    Script Date: 23/9/2020 9:24:55 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER PROCEDURE [dbo].[HistorySales] 
+	-- Add the parameters for the stored procedure here
+
+	@codigo_fact      VARCHAR(MAX) = NULL,
+	@id_vendedor      VARCHAR(MAX) = NULL,
+	@idCaja           INTEGER = 0,
+	@id_cliente       INTEGER = 0,
+	@fechaBetweenFrom DATETIME = NULL,
+	@fechaBetweenTo   DATETIME = NULL,
+	@fechaEqual       DATETIME = NULL,
+	@fechaMayor       DATETIME = NULL,
+	@fechaMenor       DATETIME = NULL,
+	@TotalFactBetweenFrom DECIMAL = 0,
+	@TotalFactBetweenTo   DECIMAL = 0,
+	@TotalFactEqual       DECIMAL = 0,
+	@TotalFactMayor       DECIMAL = 0,
+	@TotalFactMenor       DECIMAL = 0,
+	@IdCompany            INTEGER
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+
+	SELECT top(100) venta_id, id_cliente, id_vendedor, fecha, numero_documento, venta_status, 
+	       condicion_pago, local_id, subtotal, total_impuesto, total, pagado, vuelto, 
+		   codigo_fact, idCaja, tipo_doc, total_descuento, id_impuesto
+    FROM   Ventas
+	WHERE   (Ventas.numero_documento = @codigo_fact OR @codigo_fact IS NULL) AND
+	        (Ventas.id_vendedor = @id_vendedor OR @id_vendedor = 0) AND
+			(Ventas.id_cliente  = @id_cliente  OR @id_cliente = 0) AND
+			(Ventas.idCaja      = @idCaja      OR @idCaja = 0) AND
+			((Ventas.fecha BETWEEN @fechaBetweenFrom AND @fechaBetweenTo) OR @fechaBetweenFrom IS NULL) AND
+			(Ventas.fecha    = @fechaEqual OR @fechaEqual IS NULL) AND
+			(Ventas.fecha    > @fechaMayor OR @fechaMayor IS NULL) AND
+			(Ventas.fecha    < @fechaMenor OR @fechaMenor IS NULL) AND
+			(ventas.total    = @TotalFactEqual OR @TotalFactEqual = 0) AND
+	        (ventas.total > @TotalFactMayor OR @TotalFactMayor = 0) AND
+	        (ventas.total < @TotalFactMenor OR @TotalFactMenor = 0) AND
+	        ((ventas.total BETWEEN @TotalFactBetweenFrom AND @TotalFactBetweento) OR @TotalFactBetweenFrom = 0) AND
+			(ventas.IdCompany = @IdCompany)
+     ORDER BY ventas.venta_id DESC
+END
+
+

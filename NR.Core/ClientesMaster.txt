@@ -1,0 +1,62 @@
+﻿ALTER PROCEDURE [dbo].[ClientesMaster]
+	-- Add the parameters for the stored procedure here
+	@cliente_id INTEGER = 0, 
+	@Razon_Social VARCHAR(100) = NULL, 
+	@Fecha_Reg VARCHAR(100) = NULL,
+	@Operation   INTEGER      = 0
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	IF @Operation = 0
+	
+	   SELECT cliente_id, razon_social, fecha_reg
+	   FROM   Clientes LEFT JOIN Usuarios ON Usuarios.idUsu = Clientes.IdUsu
+	                   LEFT JOIN AspNetUsers ON AspNetUsers.Email = Usuarios.Email
+	   WHERE  isLogDel = 0 AND isAct = 1
+
+
+	IF @Operation = 1
+	
+	  INSERT INTO Clientes
+      (cliente_id, razon_social, fecha_reg) 
+	   DNI, Telefonos, Celulares, Nombre, Apellido, CliProd, logoCompany, email, slumurl, infoCobro, BannerTienda)
+      VALUES (@cliente_id, @razon_social, @fecha_reg)
+
+
+			  
+	IF @Operation = 2
+	
+	   UPDATE Clientes
+	   SET cliente_id   = @cliente_id, 
+	       razon_social = @Razon_Social, 
+		   fecha_reg    = @Fecha_Reg
+	    WHERE  idCli = @idCli
+
+   IF @Operation = 3
+	
+	 SELECT   Clientes.idCli, Clientes.DesCli, Clientes.DirFis, Clientes.UrlWeb, Clientes.CtaTwi, Clientes.CtaIns,
+	 FROM   Clientes LEFT JOIN Usuarios ON Usuarios.idUsu = Clientes.IdUsu
+	                   LEFT JOIN AspNetUsers ON AspNetUsers.Email = Usuarios.Email
+	   WHERE  idCli = @idCli
+
+   IF @Operation = 4
+	
+	 SELECT   Clientes.idCli, Clientes.DesCli, Clientes.DirFis, Clientes.UrlWeb, Clientes.CtaTwi, Clientes.CtaIns, 
+	          Clientes.CtaFac, Clientes.CanYou, Clientes.idInd, Clientes.slumurl,
+			  Clientes.idLug, Clientes.isLogDel, Clientes.isAct, Clientes.IdUsu, 
+			  Clientes.NomCom, Clientes.DNI, Clientes.Telefonos, 
+			  Clientes.Celulares, Clientes.Nombre, Clientes.Apellido, Clientes.CliProd, Clientes.logoCompany, 
+			  Clientes.email, AspNetUsers.UserName, Clientes.infoCobro, Clientes.BannerTienda,
+			  ( SELECT CodLug FROM dbo.Vw_Lugares WHERE idLug = Clientes.idLug ) Codlug,
+			  ( SELECT idLugEst FROM dbo.Vw_Lugares WHERE idLug = Clientes.idLug ) idLugEst
+	   FROM   Clientes LEFT JOIN Usuarios ON Usuarios.idUsu = Clientes.IdUsu
+	                   LEFT JOIN AspNetUsers ON AspNetUsers.Email = Usuarios.Email
+	   WHERE  slumUrl = @slumUrl
+
+END
+
+

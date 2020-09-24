@@ -1,0 +1,9 @@
+C:\Users\SoftLara\source\repos\NR.Core\NR.Core\bin\Debug\netstandard2.0\NR.Core.deps.json
+C:\Users\SoftLara\source\repos\NR.Core\NR.Core\bin\Debug\netstandard2.0\NR.Core.dll
+C:\Users\SoftLara\source\repos\NR.Core\NR.Core\obj\Debug\netstandard2.0\NR.Core.csprojAssemblyReference.cache
+C:\Users\SoftLara\source\repos\NR.Core\NR.Core\obj\Debug\netstandard2.0\NR.Core.AssemblyInfoInputs.cache
+C:\Users\SoftLara\source\repos\NR.Core\NR.Core\obj\Debug\netstandard2.0\NR.Core.AssemblyInfo.cs
+C:\Users\SoftLara\source\repos\NR.Core\NR.Core\obj\Debug\netstandard2.0\NR.Core.csproj.CoreCompileInputs.cache
+C:\Users\SoftLara\source\repos\NR.Core\NR.Core\bin\Debug\netstandard2.0\NR.Core.pdb
+C:\Users\SoftLara\source\repos\NR.Core\NR.Core\obj\Debug\netstandard2.0\NR.Core.dll
+C:\Users\SoftLara\source\repos\NR.Core\NR.Core\obj\Debug\netstandard2.0\NR.Core.pdb

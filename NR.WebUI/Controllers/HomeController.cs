@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NR.Core.Repository;
 using NR.WebUI.Models;
 
 namespace NR.WebUI.Controllers
@@ -12,15 +13,21 @@ namespace NR.WebUI.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private ClientesRepository clientesRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(
+            ILogger<HomeController> logger, 
+            ClientesRepository _clientesRepository
+         )
         {
             _logger = logger;
+            clientesRepository = _clientesRepository;
         }
 
         public IActionResult Index()
         {
-            return View(new Driver.Clientes().GetAll());
+            //return View(new Driver.Clientes().GetAll());
+            return View(clientesRepository.GetAll());
         }
 
         public IActionResult Save(Core.Models.Clientes c)
@@ -34,6 +41,12 @@ namespace NR.WebUI.Controllers
 
             clienteNew = clientes.Add(clienteNew);
 
+            return View(clienteNew);
+        }
+
+        public IActionResult SaveWithInjection(Core.Models.Clientes c)
+        {
+            var clienteNew = clientesRepository.Add(c);
             return View(clienteNew);
         }
 

@@ -10,3 +10,15 @@ C:\Users\SoftLara\source\repos\NR.Core\NR.Driver\obj\Debug\netstandard2.0\NR.Dri
 C:\Users\SoftLara\source\repos\NR.Core\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.csproj.CopyComplete
 C:\Users\SoftLara\source\repos\NR.Core\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.dll
 C:\Users\SoftLara\source\repos\NR.Core\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.pdb
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\bin\Debug\netstandard2.0\NR.Driver.deps.json
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\bin\Debug\netstandard2.0\NR.Driver.dll
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\bin\Debug\netstandard2.0\NR.Driver.pdb
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\bin\Debug\netstandard2.0\NR.Core.dll
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\bin\Debug\netstandard2.0\NR.Core.pdb
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.csprojAssemblyReference.cache
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.AssemblyInfoInputs.cache
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.AssemblyInfo.cs
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.csproj.CoreCompileInputs.cache
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.csproj.CopyComplete
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.dll
+C:\Users\SoftLara\source\repos\NR.Core\TemplatesProject\NR.Driver\obj\Debug\netstandard2.0\NR.Driver.pdb

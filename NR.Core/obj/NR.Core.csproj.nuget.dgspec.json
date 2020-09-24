@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\NR.Core\\NR.Core.csproj": {}
+    "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\TemplatesProject\\NR.Core\\NR.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\NR.Core\\NR.Core.csproj": {
+    "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\TemplatesProject\\NR.Core\\NR.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\NR.Core\\NR.Core.csproj",
+        "projectUniqueName": "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\TemplatesProject\\NR.Core\\NR.Core.csproj",
         "projectName": "NR.Core",
-        "projectPath": "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\NR.Core\\NR.Core.csproj",
+        "projectPath": "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\TemplatesProject\\NR.Core\\NR.Core.csproj",
         "packagesPath": "C:\\Users\\SoftLara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\NR.Core\\obj\\",
+        "outputPath": "C:\\Users\\SoftLara\\source\\repos\\NR.Core\\TemplatesProject\\NR.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,14 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

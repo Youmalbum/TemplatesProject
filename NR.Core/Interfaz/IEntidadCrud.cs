@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NR.Core.Interfaz
 {
-    interface IEntidadCrud<T>
+    public interface IEntidadCrud<T>
     {
         List<T> GetAll();
         List<T> GetAll(int Index, int TopReg);
